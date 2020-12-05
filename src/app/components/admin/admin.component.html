@@ -1,0 +1,112 @@
+<!--<h1 class="ap">Admin Profile</h1>
+<div class="AddForm" style="display: none">
+<form>
+    <label for="retailerid">Retailer's Id</label>
+    <input type="text" id="retailerid" name="retailerid"[(ngModel)]="getinfo.retailerid">
+    <br><br>
+
+    <label for="retailername">Retailer's Name</label>
+    <input type="text" id="retailername" name="retailername"[(ngModel)]="getinfo.retailername">
+    <br><br>
+
+    <label for="retaileremail">Retailer's Email</label>
+    <input type="text" id="retaileremail" name="retaileremail"[(ngModel)]="getinfo.retaileremail">
+    <br><br>
+
+    <label for="retailerphone">Retailer's Phone</label>
+    <input type="text" id="retailerphone" name="retailerphone"[(ngModel)]="getinfo.retailerphone">
+    <br><br>
+
+    <span class="add" style="display: none">
+    <button type="submit" (click)="addRetailer()">ADD</button>
+    <button type="submit" (click)="cancel()">CANCEL</button>
+    </span>
+</form>
+</div>
+<br>
+<div>
+    <button style="float: left; margin-left: 0%; margin-right: 13.5em; " class="btn btn-success" (click)="addRet()">ADD RETAILER</button>
+</div>
+<br>
+<br>
+<br>
+<div>
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Retailer's Id</th>
+                <th>Retailer's Name</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let r of details;let i=index">
+            <tr>
+                <td>{{r.retailerid}}</td>
+                <td>{{r.retailername}}</td>
+                <td><button >Notification to Verify</button></td>
+                <td><button (click)="deleteRetailer(i)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>-->
+
+<section class="Form my-3 mx-4">
+  <div class="container">
+      <div class="row no-gutters">
+         <!--<div class="col-lg-5">
+              <img src="./assets/admin/adminimg.png" class="img-fluid">
+          </div>-->
+          <div class="col-lg-7 px-5 pt-5">
+              <h1>Online Shopping App</h1>
+              <h4>Admin Profile</h4>
+              <br><br>
+              <div>
+                  <table class="table table-hover">
+                      <thead>
+                          <tr>
+                              <th>Retailer's Id</th>
+                              <th>Retailer's Name</th>
+                          </tr>
+                      </thead>
+                      <tbody *ngFor="let r of details;let i=index">
+                          <tr>
+                              <!--<td>{{r.retailerid}}</td>
+                              <td>{{r.retailername}}</td>-->
+                              <!--<td><button >Confirm Retailer</button></td>
+                              <td><button (click)="deleteRetailer(i)">Remove Retailer</button></td>-->
+                              <td>
+                                  <div class="form-row">
+                                      <div class="from-group col-lg-7">
+                                          {{r.retailerid}}
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>
+                                  <div class="form-row">
+                                      <div class="from-group col-lg-2">
+                                          {{r.retailername}}
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>
+                                  <div class="form-row">
+                                      <div class="col-lg-2">
+                                          <button class="btn1 mt-3 mb-5">Confirm Retailer</button>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>
+                                  <div class="form-row">
+                                      <div class="col-lg-2">
+                                          <button class="btn1 mt-3 mb-5" (click)="deleteRetailer(i)">Remove Retailer</button>
+                                      </div>
+                                  </div>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+
+          </div>
+      </div>
+  </div>
+</section>

@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="col s8 offset-2">
+      <div class="card-panel teal lighten-2">
+        <h4 class="center white-text">Upload Products</h4>
+      </div>
+      <form #imageForm=ngForm (ngSubmit)="OnSubmit(Productname,Productquantity,Productprice,Productdescription,Productbrand,Image,Image1)">
+        <div class="row">
+          <div class="input-field col s12">
+            <label for="Productname">Product Name</label><br>
+            <input type="text" #Productname ngModel name="Productname" id="Productname" required>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <label for="Productquantity">Product Quantity</label><br>
+            <input type="number" #Productquantity ngModel name="Productquantity" id="Productquantity">
+            
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <label for="Productprice">Product Price</label><br>
+            <input type="number" #Productprice ngModel name="Productprice" id="Productprice">
+           
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <label for="Productdescription">Product Description</label><br>
+            <input type="text" #Productdescription ngModel name="Productdescription" id="Productdescription">
+           
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <label for="Productbrand">Product Brand</label><br>
+            <input type="text" #Productbrand ngModel name="Productbrand" id="Productbrand">
+           
+          </div>
+        </div>
+        <div class="row">
+        </div>
+        <br>
+        <img [src]="imageUrl"  style="width:250px;height:200px">
+        <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)">
+        <button type="submit" class="btn-large btn-submit" [disabled]="Image.value=='' || !imageForm.valid">Submit</button>
+        <a href="/product-list">View</a>
+      </form>
+    </div>
+  </div>
+</div>

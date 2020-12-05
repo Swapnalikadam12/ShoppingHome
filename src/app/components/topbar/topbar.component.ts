@@ -18,16 +18,23 @@ import {CartService} from "../../services/cart.service";
             <div class="header-nav-wrapper">
                 <ul class="header-nav">
                 <li class="header-nav-item">
-                <a routerLink="/">LOGIN</a>
-            </li>
+                    <div class="dropdown">
+                    <button class="dropbtn">LOGIN</button>
+                    <div class="dropdown-content">
+                    <a href="/adminlogin">ADMIN</a>
+                    <a href="/retailerlogin">RETAILER</a>
+                    <a href="/login">USER</a>
+                    </div>
+                  </div>
+                </li>
                     <li class="header-nav-item">
-                        <a routerLink="/">HOME</a>
+                        <a href="home">HOME</a>
                     </li>
                     <li class="header-nav-item">
                     <div class="dropdown">
                     <button class="dropbtn">CATEGORIES</button>
                     <div class="dropdown-content">
-                    <a href="#">Mobile</a>
+                    <a href="/login">Mobile</a>
                     <a href="#">Shoes</a>
                     <a href="#">Clothes</a>
                     </div>
@@ -65,15 +72,6 @@ import {CartService} from "../../services/cart.service";
                         <a href="">MY CART <span *ngIf="cart_num">( {{cart_num}} )</span><span class="fa fa-caret-down"></span></a>
                     </div>
                 </div>
-                <div class="header-cart" (click)="toggleCartPopup($event)">
-                    <div class="mobil-shopping-cart">
-                        <span><i class="fa fa-shopping-cart fa-2x"></i> <span *ngIf="cart_num">( {{cart_num}} )</span></span>
-                    </div>
-                    <div class="header-cart-item">
-                        <a href="">MY WISHLIST <span *ngIf="cart_num">( {{cart_num}} )</span><span class="fa fa-caret-down"></span></a>
-                    </div>
-                </div>
-
            
             </div>
         </div>

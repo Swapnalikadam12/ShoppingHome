@@ -1,0 +1,24 @@
+<h1><p>employee works!</p></h1>
+
+<table border="1">
+    <tr>
+        <th>productid</th>
+        <th>productname</th>
+        <th>productprice</th>
+        <th>productquantity</th>
+        <th>productdescription</th>
+        <th>productbrand</th>
+        <th>productimage1</th>
+        
+    </tr>
+
+    <tr *ngFor="let product of productdetails">
+        <td>{{product. productid}}</td>
+        <td>{{product. productname}}</td>
+        <td>{{product. productprice}}</td>
+        <td>{{product. productquantity}}</td>
+        <td>{{product. productdescription}}</td>
+        <td>{{product. productbrand}}</td>
+        <td><img src = "https://localhost:44369/Image/{{product. productimage1}}" alt="product"></td>
+    </tr>
+</table>

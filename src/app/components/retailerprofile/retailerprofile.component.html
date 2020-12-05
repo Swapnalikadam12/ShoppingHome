@@ -1,0 +1,113 @@
+<section class="Form my-3 mx-4">
+  <div class="container">
+      <div class="row no-gutters">
+          <div class="col-lg-5">
+              <img src="./assets/admin/retailerprofileimg.jpg" class="img-fluid">
+          </div>
+          <div class="col-lg-7 px-5 pt-5">
+              <h1>Online Shopping App</h1>
+              <h4>Retailer Profile</h4>
+              <br><br>
+              <div>
+                  <table class="table table-hover">
+                      <thead>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <!--<td>{{r.retailerid}}</td>
+                              <td>{{r.retailername}}</td>-->
+                              <!--<td><button >Confirm Retailer</button></td>
+                              <td><button (click)="deleteRetailer(i)">Remove Retailer</button></td>-->
+                              <td>
+                                  <div class="form-row">
+                                      <div class="col-lg-7">
+                                          <button class="btn1 mt-3 mb-5" (onclick)="addRet()">Retailer Details</button>
+                                      </div>
+                                  </div>
+                                  <div class="form-row">
+                                      <div class="col-lg-7">
+                                          <button class="btn1 mt-3 mb-5"><a href="/changepassword">Change Password</a></button>
+                                      </div>
+                                  </div>
+                              </td>
+                              <td>
+                                  <div class="form-row">
+                                      <div class="col-lg-7">
+                                          <button class="btn1 mt-3 mb-5"><a href="/addproductdetails">Add Product</a></button>
+                                      </div>
+                                  </div>
+                                  <div class="form-row">
+                                      <div class="col-lg-7">
+                                          <button class="btn1 mt-3 mb-5"><a href="#"></a>Delete Account</button>
+                                      </div>
+                                  </div>
+                              </td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+
+          </div>
+      </div>
+  </div>
+</section>
+
+<div class="AddForm" style="display: none">
+  <table>
+      <thead>
+      </thead>
+      <tbody>
+          <tr>
+              <td>
+                  <div class="form-row">
+                      <div class="col-lg-7">
+                          <label>Retailer Id</label>
+                          {{details[0].retailerid}}
+                      </div>
+                  </div>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <div class="form-row">
+                      <div class="col-lg-7">
+                          <label>Retailer Name</label>
+                          {{details[0].retailername}}
+                      </div>
+                  </div>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <div class="form-row">
+                      <div class="col-lg-7">
+                          <label>Retailer Email</label>
+                          {{details[0].retaileremail}}
+                      </div>
+                  </div>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <div class="form-row">
+                      <div class="col-lg-7">
+                          <label>Retailer Phone</label>
+                          {{details[0].retailerphone}}
+                      </div>
+                  </div>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  <div class="form-row">
+                      <div class="col-lg-7">
+                          <button class="btn1 mt-3 mb-5" (click)="cancel()">Cancel</button>
+                      </div>
+                  </div>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+

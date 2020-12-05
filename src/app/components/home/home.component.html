@@ -1,0 +1,29 @@
+<div class="header-image">
+  <div class="header-block">
+      <div class="header-text">
+          <div class="header-text-title">The Great Indian Sale</div>
+          <p>
+              The festive season sale has begun. The Great Indian Festival 'Finale Days' will last till November 30.<br>
+              Explore vast selection of products from Top Brands. Pay on Delivery.
+          </p>
+      </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+      <div class="col-md-3 mx-auto my-5" *ngFor = "let product of productdetails">
+          <div class="card full">
+              <img class="card-img-top" src= "https://localhost:44369/Image/{{product. productimage1}}" alt="product" width="250px" height="200px">
+              <div class="card-body">
+                  <div class="card-text">
+                      <h3 class = "card-title"><u>{{ product.productname }}</u></h3><hr>
+                      <h4  style = "color: #3498DB;"> Price : {{ product.productprice }} &#8377;</h4><hr>
+                      <h5 style = "color: #3498DB; "> Description: {{ product.productdescription }}</h5><hr>
+                      <h5 style = "color: red;"> Product Quantity : {{ product.productquantity}} pcs</h5><hr>
+                      <button class="btn1 btn-warning" (click) = "addtocart(p.ProductId)"> Add to cart </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
